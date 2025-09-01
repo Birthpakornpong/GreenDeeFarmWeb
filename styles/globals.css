@@ -1,0 +1,381 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header-1 {
+    @apply w-full bg-gradient-to-r from-blue-primary to-blue-secondary py-3 px-2 sm:px-6 lg:px-24 justify-between items-center flex text-white flex-wrap;
+  }
+
+  .header-2 {
+    @apply w-full bg-gradient-to-r from-blue-primary to-blue-secondary py-3 px-2 sm:px-6 lg:px-24 justify-between items-center flex text-white flex-wrap;
+  }
+
+  .dropdown-header {
+    @apply inline-flex justify-center w-full px-4 py-2 text-sm rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 font-bold;
+  }
+
+  .dropdown-header-2 {
+    @apply inline-flex justify-center w-full px-4 py-2 text-base rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 font-bold;
+  }
+
+
+  .form-control {
+    @apply px-7 py-3 border rounded-md border-gray-border;
+  }
+
+  .text-link {
+    @apply cursor-pointer text-gray-link underline;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+
+@font-face {
+  font-family: "Kanit";
+  src:
+    local("Kanit"),
+    url(/assets/fonts/Kanit-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit-SemiBold";
+  src:
+    local("Kanit-SemiBold"),
+    url(/assets/fonts/Kanit-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit-Bold";
+  src:
+    local("Kanit-Bold"),
+    url(/assets/fonts/Kanit-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit-Regular";
+  src:
+    local("Kanit-Regular"),
+    url(/assets/fonts/Kanit-Regular.ttf) format("truetype");
+}
+
+button,
+input,
+select,
+textarea,
+a,
+p,
+label,
+span,
+td,
+tr,
+pre,
+div {
+  font-family: Kanit !important;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Kanit-SemiBold;
+}
+
+h4,
+h5,
+strong {
+  font-family: Kanit-Regular;
+  font-size: 1.125rem;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin-left: 2rem;
+  list-style-type: square;
+}
+
+ol,
+menu {
+  list-style-type: decimal;
+  margin-left: 2rem;
+}
+
+ul li {
+  margin: 5px 0px;
+}
+
+ul li::marker {
+  color: #002169;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+ul.list-square {
+  margin-left: 2rem;
+}
+
+ul.list-square li {
+  margin: 5px 0px;
+}
+
+ul.list-square li::marker {
+  color: #002169;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.react-select .react-select__control {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(212 215 215 / var(--tw-border-opacity));
+  padding-left: 1.15rem;
+  padding-right: 1.15rem;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+button:disabled {
+  opacity: 0.2;
+}
+
+.font-semibold {
+  font-family: "Kanit-SemiBold" !important;
+  font-weight: 400;
+}
+
+.font-regular {
+  font-family: "Kanit-Regular" !important;
+  font-weight: 700;
+}
+
+.container-text {
+  background-color: #13216a;
+  color: #fff;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 2%;
+  border-radius: 40px;
+  padding: 1rem 3rem;
+}
+
+.border-text {
+  border-bottom: dashed 1px #ccc;
+  margin-bottom: 7%;
+  padding-bottom: 10%;
+}
+
+.tableA th {
+  background-color: #13216a;
+  padding: 25px 15px;
+  color: #ffffff;
+  font-size: 18px;
+  border: 5px solid #fff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.tableA td {
+  border: 5px solid #fff;
+  padding: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+
+  .tableA th,
+  .tableA td {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+}
+
+.tableB th {
+  background-color: #13216a;
+  padding: 5px 5px;
+  color: #ffffff;
+  font-size: 16px;
+  border: 5px solid #fff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.tableB td {
+  border: 5px solid #fff;
+  padding: 10px;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+
+.tableC th {
+  background-color: #13216a;
+  padding: 10px 15px;
+  color: #ffffff;
+  font-size: 18px;
+  border: 1px solid #fff;
+  text-align: left;
+  font-weight: 400;
+
+}
+
+.tableC th:first-child {
+  border-top-left-radius: 10px;
+  /* โค้งมุมบนซ้าย */
+}
+
+.tableC th:last-child {
+  border-top-right-radius: 10px;
+  /* โค้งมุมบนขวา */
+}
+
+.tableC td {
+  border: 1px solid #d4d4d4;
+  padding: 10px 15px;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: left;
+}
+
+.tableC tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+  /* โค้งมุมซ้ายล่าง */
+}
+
+.tableC tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+  /* โค้งมุมขวาล่าง */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+
+  .tableC th,
+  .tableC td {
+    padding: 6px 5px;
+    font-size: 14px;
+  }
+}
+
+.tableAUp th {
+  background-color: #13216a;
+  padding: 10px 7px;
+  color: #ffffff;
+  font-size: 18px;
+
+  text-align: center;
+  font-weight: 400;
+
+}
+
+.tableAUp th:first-child {
+  border-top-left-radius: 10px;
+
+  /* โค้งมุมบนซ้าย */
+}
+
+.tableAUp th:last-child {
+  border-top-right-radius: 10px;
+
+  /* โค้งมุมบนขวา */
+}
+
+.tableAUp {
+  border-collapse: collapse;
+  /* รวมเส้นขอบ */
+}
+
+.tableAUp td {
+  border-top: 1px solid #d4d4d4;
+  /* เส้นขอบด้านบน */
+  border-bottom: 1px solid #d4d4d4;
+  /* เส้นขอบด้านล่าง */
+  padding: 10px 7px;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+
+.tableAUp td:first-child {
+  border-left: 1px solid #d4d4d4;
+  /* เส้นขอบด้านซ้ายของคอลัมน์แรก */
+}
+
+.tableAUp td:last-child {
+  border-right: 1px solid #d4d4d4;
+  /* เส้นขอบด้านขวาของคอลัมน์สุดท้าย */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+
+  .tableAUp th,
+  .tableAUp td {
+    padding: 6px 5px;
+    font-size: 14px;
+  }
+}
+
+.bg-new {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.apexcharts-xaxis-annotations rect {
+  display: none !important;
+}
+
+.apexcharts-point-annotations rect {
+  display: none !important;
+}
+
+.status-card {
+  background-color: #f5f5f5;
+  /* สีพื้นหลังเริ่มต้น */
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* เพิ่มเงา */
+  transition: transform 0.2s ease-in-out;
+
+  label {
+    font-size: 40px;
+    margin-bottom: 0px;
+    font-weight: 600;
+  }
+}
+
+.status-card:hover {
+  transform: translateY(-10px);
+  /* ทำให้การ์ดยกขึ้นเมื่อ hover */
+}

@@ -1,0 +1,22 @@
+.description > h1 {
+    font-weight: 300 !important;
+    font-family: Kanit !important;
+    color: #333;
+}
+
+.description {
+    font-weight: 300 !important;
+    font-family: Kanit !important;
+    color: #333;
+}
+
+.small_description {
+    font-weight: 300 !important;
+    font-family: Kanit !important;
+    color: #333;
+}
+.small_description > h1 {
+    font-weight: 300 !important;
+    font-family: Kanit !important;
+    color: #333;
+}

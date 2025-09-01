@@ -1,0 +1,6 @@
+<svg aria-hidden="true" data-prefix="fad" data-icon="barcode-alt" className="svg-inline--fa fa-barcode-alt fa-w-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <g className="fa-group">
+        <path className="fa-secondary" fill="#4caefe" d="M592 0H48A48 48 0 0 0 0 48v416a48 48 0 0 0 48 48h544a48 48 0 0 0 48-48V48a48 48 0 0 0-48-48zM160 408a8 8 0 0 1-8 8h-48a8 8 0 0 1-8-8V104a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8zm64 0a8 8 0 0 1-8 8h-16a8 8 0 0 1-8-8V104a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8zm64 0a8 8 0 0 1-8 8h-16a8 8 0 0 1-8-8V104a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8zm128 0a8 8 0 0 1-8 8h-48a8 8 0 0 1-8-8V104a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8zm128 0a8 8 0 0 1-8 8h-48a8 8 0 0 1-8-8V104a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8z" opacity=".4"/>
+        <path className="fa-primary" fill="#4caefe" d="M152 96h-48a8 8 0 0 0-8 8v304a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8V104a8 8 0 0 0-8-8zm64 0h-16a8 8 0 0 0-8 8v304a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8V104a8 8 0 0 0-8-8zm64 0h-16a8 8 0 0 0-8 8v304a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8V104a8 8 0 0 0-8-8zm128 0h-48a8 8 0 0 0-8 8v304a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8V104a8 8 0 0 0-8-8zm128 0h-48a8 8 0 0 0-8 8v304a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8V104a8 8 0 0 0-8-8z"/>
+    </g>
+</svg>
