@@ -64,13 +64,13 @@ export default function Home() {
     // Fetch data for banners, promotions, and news
     async function fetchData() {
       try {
-        const [bannerRes, promoRes, newsRes] = await Promise.all([
-          ApiNews.getBanner(),
-          ApiMasters.getPromotionsSeasoning(),
-          ApiNews.get(),
-        ]);
+        // const [bannerRes, promoRes, newsRes] = await Promise.all([
+        //   ApiNews.getBanner(),
+        //   ApiMasters.getPromotionsSeasoning(),
+        //   ApiNews.get(),
+        // ]);
         setResult(BannerData);
-        setPromotions(promoRes.data || []);
+        // setPromotions(promoRes.data || []);
         setResultNews(newsData);
       } catch (e) {
         // handle error if needed
