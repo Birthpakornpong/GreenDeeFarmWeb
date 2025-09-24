@@ -9,8 +9,10 @@ const Layout = ({ children }) => {
   const isHomePage = router.pathname === "/"; // ตรวจสอบว่าเป็นหน้าแรกหรือไม่
 
   useEffect(() => {
+    // Debug: log current path
+    console.log('🌱 Green Dee Farm - Current path:', router.pathname);
     return () => {};
-  }, []);
+  }, [router.pathname]);
   return (
     <>
       <Head>

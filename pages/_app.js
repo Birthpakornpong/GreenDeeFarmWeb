@@ -11,6 +11,7 @@ import { SessionProvider } from "next-auth/react"
 import { getCsrfToken, getProviders, signIn, useSession, signOut } from "next-auth/react"
 import { Router } from 'next/router';
 import toast, { Toaster } from 'react-hot-toast';
+import { ErrorBoundary, LoadingScreen } from '@components/ErrorBoundary';
 const https = require('https');
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
@@ -77,6 +78,16 @@ export default function MyApp({
   pageProps: { session, ...pageProps },
 }) {
   const [loading, setLoading] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+
+  // Handle hydration
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <LoadingScreen message="เตรียมเว็บไซต์..." />;
+  }
   React.useEffect(() => {
     const start = () => {
       setLoading(true);
@@ -122,10 +133,13 @@ export default function MyApp({
 
 
   return (
-    <>
+    <ErrorBoundary>
       <SessionProvider session={session}>
         <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
+          <PersistGate 
+            loading={<LoadingScreen message="กำลังโหลดข้อมูล..." />} 
+            persistor={persistor}
+          >
 
             <Layout>
               <Toaster
@@ -155,8 +169,7 @@ export default function MyApp({
           </PersistGate>
         </Provider>
       </SessionProvider>
-    </>
-
+    </ErrorBoundary>
   )
 }
 
