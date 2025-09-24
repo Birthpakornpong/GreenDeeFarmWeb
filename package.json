@@ -4,8 +4,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "node server.js",
+    "start:next": "next start",
+    "lint": "next lint",
+    "deploy:plesk": "npm run build && npm run start"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^2.0.4",
