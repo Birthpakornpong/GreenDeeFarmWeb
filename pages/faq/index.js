@@ -12,7 +12,7 @@ const FAQPage = () => {
   useEffect(() => {
     async function fetchFAQ() {
       try {
-        const res = await ApiNews.getFAQ();
+        // const res = await ApiNews.getFAQ();
         setResult(faqData);
         if (faqData && faqData.length > 0) setFaqSelect(faqData[0].id);
       } catch (e) {
