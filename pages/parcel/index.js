@@ -25,7 +25,7 @@ const ParcelPage = ({ result = [] }) => {
     <div>
       <TitleMenu
      
-          title="ส่งสินค้าควบคุมอุณหภูมิ (Parcel)"
+          title="ส่งสินค้าควบคุมอุณหภูมิ  (Parcel)"
           
       />
       <div className="flex flex-col sm:flex-row sm:px-20 sm:gap-10">
