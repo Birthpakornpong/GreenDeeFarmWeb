@@ -69,25 +69,8 @@ const FAQPage = () => {
                 <Disclosure.Panel className={"w-full  pb-1 text-md"}>
                   {result.map((item) => {
                     return (
-                      // <button
-                      //   key={`button_` + item.id}
-                      //   className="flex justify-between gap-5 px-4 py-5 border-2 rounded-[20px]"
-                      //   onClick={() => {
-                      //     scrollTo(`content_` + item.id);
-                      //   }}>
-                      //   <div className="text-left text-blue-primary font-bold">
-                      //     {item.question}
-                      //   </div>
-                      //   <div className="shrink-0">
-                      //     <img
-                      //       src="/assets/icons/arrow-right-long-duotone.svg"
-                      //       alt="arrow-right"
-                      //       className="text-blue-secondary w-5 sm:w-7"
-                      //     />
-                      //   </div>
-                      // </button>
-
                       <div
+                        key={`faq_item_${item.id}`}
                         className={`text-left  font-bold py-3 cursor-pointer hover:text-green-600 transition-colors ${
                           item.id == faqSelect
                             ? "text-green-600 text-xl"

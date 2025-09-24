@@ -86,6 +86,7 @@ const ParcelPage = ({ result = [] }) => {
                           {result.map((item) => {
                             return (
                               <div
+                                key={`parcel_item_${item.id}`}
                                 className={`text-left  font-bold py-3 ${
                                   item.id == faqSelect
                                     ? "text-blue-primary text-xl"

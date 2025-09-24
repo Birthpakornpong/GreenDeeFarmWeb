@@ -1,14 +1,16 @@
-﻿const withPlugins = require('next-compose-plugins')
-
-const plugins = []
-
+﻿/** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    VERSION: '1.0',
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
   },
-  experimental: {
-    outputStandalone: true,
+  basePath: '',
+  assetPrefix: '',
+  distDir: 'out',
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 }
 
-module.exports = withPlugins(plugins, nextConfig)
+module.exports = nextConfig

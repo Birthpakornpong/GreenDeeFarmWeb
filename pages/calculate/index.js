@@ -13,7 +13,7 @@ const plans = [
   { name: "พัสดุแช่แข็ง", ram: "32GB", cpus: "12 CPUs", disk: "1TB SSD disk" },
 ];
 
-const calculatePage = () => {
+const CalculatePage = () => {
   const [selected, setSelected] = useState(plans[0]);
 
   return (
@@ -193,4 +193,4 @@ const calculatePage = () => {
   );
 };
 
-export default calculatePage;
+export default CalculatePage;

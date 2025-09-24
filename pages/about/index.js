@@ -21,7 +21,7 @@ const AboutPage = () => {
                     ฟาร์มผักสลัดออร์แกนิกคุณภาพสูง
                 </h2>
                 <p className="text-gray-600 mt-4 text-base sm:text-lg">
-                    "ปลูกด้วยใจ ส่งมอบความสดใหม่"
+                    &ldquo;ปลูกด้วยใจ ส่งมอบความสดใหม่&rdquo;
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 mt-12">
