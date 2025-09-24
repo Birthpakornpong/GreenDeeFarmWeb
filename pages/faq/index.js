@@ -37,9 +37,9 @@ const FAQPage = () => {
   return (
     <div>
       <TitleMenu
-        imageSrc="/assets/images/faq.webp"
-        title="FAQ (คำถามที่พบบ่อย)"
-        description="คำถามที่พบบ่อย"
+        imageSrc="/assets/images/farm/banner1.jpg"
+        title="คำถามที่พบบ่อย"
+        description="Green Dee Farm - ข้อมูลเกี่ยวกับผักสลัดออร์แกนิกคุณภาพสูง"
       />
       <div className="flex flex-col sm:flex-row sm:px-20 sm:gap-10">
         <div
@@ -56,14 +56,14 @@ const FAQPage = () => {
                     className={
                       "group flex w-full items-center justify-between py-3"
                     }>
-                    <span className="text-left font-extrabold text-2xl flex-1">
-                      คำแนะนำในการจัดส่งสินค้า
+                    <span className="text-left font-extrabold text-2xl flex-1 text-green-700">
+                      คำถามเกี่ยวกับผักสลัดออร์แกนิก
                     </span>
-                    <ChevronDownIcon
+                    {/* <ChevronDownIcon
                       className={
                         open ? "rotate-180 transform h-6 w-8" : "h-6 w-8"
                       }
-                    />
+                    /> */}
                   </Disclosure.Button>
                 </div>
                 <Disclosure.Panel className={"w-full  pb-1 text-md"}>
@@ -88,9 +88,9 @@ const FAQPage = () => {
                       // </button>
 
                       <div
-                        className={`text-left  font-bold py-3 ${
+                        className={`text-left  font-bold py-3 cursor-pointer hover:text-green-600 transition-colors ${
                           item.id == faqSelect
-                            ? "text-blue-primary text-xl"
+                            ? "text-green-600 text-xl"
                             : ""
                         }
                       }`}
@@ -122,14 +122,14 @@ const FAQPage = () => {
                 className={`${item.id == faqSelect ? "flex" : "hidden"}`}>
                 <div className="py-10">
                   <div className="px-5">
-                    <div className="text-xl font-bold">{item.question}</div>
+                    <div className="text-xl font-bold text-green-700 mb-4">{item.question}</div>
                     <div
                       className="ql-editor"
                       dangerouslySetInnerHTML={{ __html: item.answer }}></div>
                   </div>
                 </div>
                 {index < result.length - 1 && (
-                  <hr className="ml-5 border-[1px] border-blue-secondary border-dashed" />
+                  <hr className="ml-5 border-[1px] border-green-300 border-dashed" />
                 )}
               </div>
             );

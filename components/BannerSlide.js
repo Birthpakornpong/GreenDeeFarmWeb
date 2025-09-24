@@ -9,8 +9,8 @@ const BannerSlide = ({ banners = [] }) => {
                 return (
                     // <a key={"banner-" + item.id} target="_blank" href={item.link_relate} rel="noopener noreferrer">
                     <div key={"banner-" + item.id} >
-                        <img className="object-cover"
-                            src={process.env.IMAGE_BACKEND_URL + item.image} />
+                        <img className="object-cover h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full"
+                            src={item.image} />
                     </div>
                     // </a>
                     // <Link href={item.link_relate} passHref={true}>

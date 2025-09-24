@@ -10,7 +10,7 @@ const BannerData = [
         "createby": "1",
         "updatedate": "2025-07-14T10:29:23.000Z",
         "updateby": "1147",
-        "image": "uploads/tranCtBanner/banner 3/banner-web-à¹à¸à¸¡.jpg",
+        "image": "assets/images/farm/banner2.jpg",
         "seq": 3,
         "record_status": "A"
     },
@@ -25,7 +25,7 @@ const BannerData = [
         "createby": null,
         "updatedate": "2025-07-14T10:28:52.000Z",
         "updateby": "1147",
-        "image": "uploads/tranCtBanner/banner 1/banner-web-à¸¥à¹à¸²à¸ªà¸¸à¸.jpg",
+         "image": "assets/images/farm/banner3.jpg",
         "seq": 1,
         "record_status": "A"
     },
@@ -40,7 +40,7 @@ const BannerData = [
         "createby": "1",
         "updatedate": "2025-04-16T01:13:53.000Z",
         "updateby": "1",
-        "image": "uploads/tranCtBanner/banner 2/banner-web-aÌÂ¸_aÌÂ¸Â¹aÌÂ¸Â¥.jpg",
+         "image": "assets/images/farm/banner1.jpg",
         "seq": 2,
         "record_status": "A"
     }

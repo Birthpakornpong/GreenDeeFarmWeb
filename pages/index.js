@@ -116,8 +116,8 @@ export default function Home() {
         </div> */}
       </div>
 
-      <TrackStatus />
-      <div className="bg-gray-200">
+      {/* <TrackStatus /> */}
+      <div className="bg-stone-50">
         <ServiceHome />
       </div>
       <AccordionList className="mt-2" />

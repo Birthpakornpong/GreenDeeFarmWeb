@@ -4,13 +4,13 @@ import { PhoneIcon } from "@heroicons/react/solid";
 import { ClockIcon, MapPinIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  {
-    name: "ติดตามสถานะพัสดุ",
-    href: "tracking",
-    current: false,
-    extarnal: false,
-    link: "https://track.fuzepost.co.th/",
-  },
+  // {
+  //   name: "ติดตามสถานะพัสดุ",
+  //   href: "tracking",
+  //   current: false,
+  //   extarnal: false,
+  //   link: "https://track.fuzepost.co.th/",
+  // },
   { name: "บริการ", href: "service" },
   //   { name: "หน้าแรก", href: "#" },
   //   {
@@ -31,7 +31,7 @@ const navigation = [
 const navigation2 = [
   { name: "ติดต่อเรา", href: "contact" },
   { name: "คำถามที่พบบ่อย", href: "faq" },
-  { name: "ประกาศนโยบายความเป็นส่วนตัว", href: "privacy-notice" },
+  // { name: "ประกาศนโยบายความเป็นส่วนตัว", href: "privacy-notice" },
   //   { name: "บริการของเรา", href: "service" },
   //   { name: "เกี่ยวกับเรา", href: "about", current: false },
   // { name: 'บริการรับส่งสินค้า แช่เย็น/แช่แข็ง', href: '#', sub: true },
@@ -53,7 +53,7 @@ const SocialButtons = () => {
   return (
     <div className="flex gap-2">
       <Link
-        href="https://www.facebook.com/fuzepost/"
+        href="https://www.tiktok.com/@chinjungmeow"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-full  cursor-pointer">
@@ -68,7 +68,7 @@ const SocialButtons = () => {
 
       {/* LINE */}
       <Link
-        href="https://line.me/ti/p/~@Fuzepost"
+        href="https://line.me/ti/p/~birthids"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-full  cursor-pointer"
@@ -79,7 +79,7 @@ const SocialButtons = () => {
       </Link>
 
       <Link
-        href="https://www.facebook.com/fuzepost/"
+        href="https://www.facebook.com/profile.php?id=100075999497749"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-full  cursor-pointer"
@@ -99,7 +99,7 @@ const Footer = () => {
   const userState = useSelector((state) => state.user);
   return (
     <div>
-      <div className="h-2 w-full bg-gradient-to-r from-blue-primary to-blue-secondary"></div>
+      <div className="h-2 w-full bg-gradient-to-r from-green-600 to-green-400"></div>
       {/* <div className="w-full flex px-4 py-10 justify-between flex-wrap container mx-auto">
         <div className="flex flex-col items-start whitespace-pre-line max-w-xs mr-10 flex-wrap">
           <img
@@ -192,7 +192,7 @@ const Footer = () => {
           <div className="flex flex-col items-start whitespace-pre-line max-w-xs mr-10 flex-wrap">
             <img
               className="block h-20 w-auto"
-              src={"/assets/images/logo-01.svg"}
+              src={"/assets/images/farm/logo.jpg"}
               alt="Logo"
             />
             {/* <span className="text-blue-primary mt-5 text-xl">{`FUZE (ฟิ้วซ์) บริการขนส่งสินค้า 
@@ -200,8 +200,8 @@ const Footer = () => {
             <span className="mt-2">{`ผนึกความร่วมมือระหว่าง บริษัท ไปรษณีย์ไทย จำกัด บริษัท เจดับเบิ้ลยูดี เอ็กซ์เพรส จำกัด และ บริษัท แฟลช เอ็กซ์เพรส จำกัด
 เครือข่ายจุดให้บริการทั่วไทย และขับเคลื่อนด้วยเทคโนโลยีดิจิทัลที่ทันสมัย ครอบคลุมพื้นที่ทั่วไทยและอาเซียน`}</span> */}
 
-            <span className="text-blue-primary mt-5 text-2xl font-bold">{`บริษัท ฟิ้วซ์ โพสต์ จำกัด`}</span>
-            <div className="flex items-center">
+            {/* <span className="text-green-600 mt-5 text-2xl font-bold">{`Green Dee Farm`}</span> */}
+            <div className="flex items-center mt-5">
               <ClockIcon className="w-4 h-4 mr-1" />
               <span className="text-gray-600 whitespace-pre-line">{`9:00-18:00 น. จันทร์-อาทิตย์`}</span>
             </div>
@@ -212,16 +212,16 @@ const Footer = () => {
                 alt="Pin"
                 className="w-4 h-4 mr-1"
               />
-              <span className="text-gray-600 whitespace-pre-line">{`111 ถ. แจ้งวัฒนะ แขวงทุ่งสองห้อง `}</span>
+              <span className="text-gray-600 whitespace-pre-line">{`อำเภอเมือง จังหวัดภูเก็ต 83000`}</span>
             </div>
 
-            <span className="text-gray-600 whitespace-pre-line ml-5">{`เขตหลักสี่  กรุงเทพมหานคร 10210`}</span>
+            {/* <span className="text-gray-600 whitespace-pre-line ml-5">{`เขตหลักสี่  กรุงเทพมหานคร 10210`}</span> */}
           </div>
         </div>
 
         {/* ส่วนที่ 2 (1 ส่วน) */}
         <div className="flex-[1]  p-4 pt-0 sm:pt-10">
-          <span className="text-blue-primary mt-5 text-xl font-bold">{`ข้อมูลเกี่ยวกับบริษัท`}</span>
+          <span className="text-green-600 mt-5 text-xl font-bold">{`ข้อมูลเกี่ยวกับบริษัท`}</span>
           <div className="flex  flex-col whitespace-nowrap mt-5">
             {navigation
               .filter(
@@ -256,7 +256,7 @@ const Footer = () => {
 
         {/* ส่วนที่ 3 (1 ส่วน) */}
         <div className="flex-[1] p-4 pt-0 sm:pt-10">
-          <span className="text-blue-primary mt-5 text-xl font-bold">{`ช่วยเหลือ`}</span>
+          <span className="text-green-600 mt-5 text-xl font-bold">{`ช่วยเหลือ`}</span>
           <div className="flex flex-col whitespace-nowrap mt-5">
             {navigation2.map((item) => {
               if (item.sub) {
@@ -286,7 +286,7 @@ const Footer = () => {
 
         {/* ส่วนที่ 4 (2 ส่วน) */}
         <div className="flex-[2] flex px-4 pb-10 sm:pb-0  sm:mt-10 flex-col sm:pl-20">
-          <label className="text-blue-primary text-xl font-bold">
+          <label className="text-green-600 text-xl font-bold">
             Call Center
           </label>
           {/* <a
@@ -298,13 +298,13 @@ const Footer = () => {
               </h5>
             </a> */}
           <div className="mt-3">
-            <button className="inline-flex  items-center text-right rounded-l-full rounded-r-full bg-blue-primary text-white px-4 py-2 rounded hover:bg-blue-primary">
+            <button className="inline-flex  items-center text-right rounded-l-full rounded-r-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
               <PhoneIcon className="w-4 h-4 mr-2" />
-              Call 02-0556787
+              Call 064-5420333
             </button>
           </div>
 
-          <span className="text-blue-primary mt-5 mb-2 text-xl font-bold">{`Social Contract`}</span>
+          <span className="text-green-600 mt-5 mb-2 text-xl font-bold">{`Social Contract`}</span>
           <SocialButtons />
           {/* <span className="text-blue-primary whitespace-pre-line">{`9:00-18:00 น. จันทร์-อาทิตย์`}</span>
             <span className="mt-1 text-sm">
@@ -312,9 +312,9 @@ const Footer = () => {
             </span> */}
         </div>
       </div>
-      <div className="w-full bg-blue-secondary_light flex items-center justify-center py-2 px-4 lg:px-20">
-        <span className="text-blue-primary text-xs sm:text-base whitespace-nowrap">
-          Copyright © 2024 FuzePost Company Limited. All Rights Reserved
+      <div className="w-full bg-green-50 flex items-center justify-center py-2 px-4 lg:px-20">
+        <span className="text-green-700 text-xs sm:text-base whitespace-nowrap">
+          Copyright © 2025 Green Dee Farm. All Rights Reserved
         </span>
       </div>
     </div>

@@ -23,7 +23,7 @@ const SocialButtons = () => {
   return (
     <div className="flex gap-2">
       <Link
-        href="https://www.facebook.com/fuzepost/"
+        href="https://www.tiktok.com/@chinjungmeow"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-full  cursor-pointer">
@@ -31,14 +31,14 @@ const SocialButtons = () => {
           <img
             className="h-3 w-2"
             src="/assets/icons/Tiktok.png"
-            alt="Facebook"
+            alt="TikTok"
           />
         </div>
       </Link>
 
       {/* LINE */}
       <Link
-        href="https://line.me/ti/p/~@Fuzepost"
+        href="https://line.me/ti/p/~birthids"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-full  cursor-pointer"
@@ -49,7 +49,7 @@ const SocialButtons = () => {
       </Link>
 
       <Link
-        href="https://www.facebook.com/fuzepost/"
+        href="https://www.facebook.com/profile.php?id=100075999497749"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-full  cursor-pointer"
@@ -116,27 +116,22 @@ const navigation = [
   //   link: "https://track.fuzepost.co.th/",
   // },
   // { name: `จุดส่งพัสดุ`, href: '#', current: false },
-  {
-    name: "บริการ",
-    href: "contact",
-    current: false,
-    sub_navigation: [
-      { name: `ส่งสินค้าควบคุมอุณหภูมิ`, href: "parcel", current: false },
-      { name: `ส่งสินค้าแบบเหมาคัน`, href: "parcel", current: false },
-      {
-        name: `Cold Chain Delivery Solution  `,
-        href: "parcel",
-        current: false,
-      },
-      // { name: `บริการ`, href: "service", current: false },
-      // { name: `พื้นที่จัดส่ง`, href: "area", current: false },
-      // { name: `ค้นหาจุดให้บริการ`, href: "dropoff", current: false },
-      // { name: `อัตราค่าบริการ`, href: "rate", current: false },
-      // { name: `ติชม/แนะนำ`, href: 'complain', current: false },
-      // { name: 'บริการรับส่งดอกไม้', href: 'service/flower', current: false },
-      // { name: 'ส่งสินค้าพัสดุทั่วไป', href: '#', current: false },
-    ],
-  },
+  { name: "บริการ", href: "area", current: false },
+  // {
+  //   name: "บริการ",
+  //   href: "contact",
+  //   current: false,
+  //   sub_navigation: [
+  //     { name: `ส่งสินค้าควบคุมอุณหภูมิ`, href: "parcel", current: false },
+  //     { name: `ส่งสินค้าแบบเหมาคัน`, href: "parcel", current: false },
+  //     {
+  //       name: `Cold Chain Delivery Solution  `,
+  //       href: "parcel",
+  //       current: false,
+  //     },
+     
+  //   ],
+  // },
   // { name: 'ค้นหาจุดให้บริการ', href: 'dropoff', current: false },
   // { name: 'พื้นที่จัดส่ง', href: 'area', current: false },
   // { name: "ข่าวสาร", href: "news", current: false },
@@ -150,18 +145,18 @@ const navigation = [
   //     //     ]
   // },
   { name: "เกี่ยวกับเรา", href: "about", current: false },
-  {
-    name: "ติดต่อเรา",
-    href: "contact",
-    current: false,
-    sub_navigation: [
-      { name: `ติดต่อเรา`, href: "contact", current: false },
-      { name: `คำถามที่พบบ่อย`, href: "faq", current: false },
-      // { name: `ติชม/แนะนำ`, href: 'complain', current: false },
-      // { name: 'บริการรับส่งดอกไม้', href: 'service/flower', current: false },
-      // { name: 'ส่งสินค้าพัสดุทั่วไป', href: '#', current: false },
-    ],
-  },
+   { name: `ติดต่อเรา`, href: "contact", current: false },
+    { name: `คำถามที่พบบ่อย`, href: "faq", current: false },
+  // {
+  //   name: "ติดต่อเรา",
+  //   href: "contact",
+  //   current: false,
+  //   sub_navigation: [
+  //     { name: `ติดต่อเรา`, href: "contact", current: false },
+  //     { name: `คำถามที่พบบ่อย`, href: "faq", current: false },
+     
+  //   ],
+  // },
   { name: "ออกจากระบบ", href: "signout", current: false },
 ];
 
@@ -278,9 +273,9 @@ export default function Header() {
             <SocialButtons />
           </div>
 
-          <button className="flex items-center text-right rounded-l-full rounded-r-full bg-blue-primary text-white px-4 py-1 rounded hover:bg-blue-primary ml-2">
+          <button className="flex items-center text-right rounded-l-full rounded-r-full bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700 ml-2">
             <PhoneIcon className="w-4 h-4 mr-2" />
-            Call 02-0556787
+            Call 064-5420333
           </button>
 
           {/* <div className='flex items-center ml-10 pl-2'>
@@ -299,7 +294,7 @@ export default function Header() {
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 whitespace-nowrap ">
-              <div className="relative flex items-center justify-between py-3">
+              <div className="relative flex items-center justify-between py-2">
                 <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -316,14 +311,14 @@ export default function Header() {
                     <Link href={"/"}>
                       <img
                         className="block lg:hidden h-10 w-auto cursor-pointer"
-                        src={"/assets/images/logo-01.svg"}
+                        src={"/assets/images/farm/logo.jpg"}
                         alt="Logo"
                       />
                     </Link>
                     <Link href={"/"}>
                       <img
                         className="hidden lg:block h-10 w-auto cursor-pointer"
-                        src={"/assets/images/logo-01.svg"}
+                        src={"/assets/images/farm/logo.jpg"}
                         alt="Logo"
                       />
                     </Link>
@@ -351,8 +346,8 @@ export default function Header() {
                                       : asPath.includes(item.href) &&
                                         item.href != ""
                                   )
-                                    ? "bg-blue-primary text-white"
-                                    : "text-black hover:bg-blue-secondary_light hover:text-black",
+                                    ? "bg-green-600 text-white"
+                                    : "text-black hover:bg-green-50 hover:text-black",
                                   "px-3 py-2 rounded-md text-sm font-bold"
                                 )}
                                 aria-current={
@@ -436,8 +431,8 @@ export default function Header() {
                                       : asPath.includes(item.href) &&
                                         item.href != ""
                                   )
-                                    ? "text-blue-primary text-base font-extrabold"
-                                    : "text-black hover:bg-blue-secondary_light hover:text-black",
+                                    ? "text-green-600 text-base font-extrabold"
+                                    : "text-black hover:bg-green-50 hover:text-black",
                                   "px-3 py-2 rounded-md text-sm font-bord"
                                 )}
                                 aria-current={
@@ -560,8 +555,8 @@ export default function Header() {
 
             <Disclosure.Panel className="sm:hidden">
               <div className="flex w-full">
-                {/* ส่วนที่ 1 (1 ส่วน) */}
-                <div className="flex-[1]">
+           
+                {/* <div className="flex-[1]">
                   <div className="flex items-center ml-3 pl-2 my-2">
                     <Select
                       options={options}
@@ -600,7 +595,7 @@ export default function Header() {
                       }}
                     />
                   </div>
-                </div>
+                </div> */}
 
                 {/* ส่วนที่ 2 (2 ส่วน) */}
                 <div className="flex-[1.5] ">
@@ -625,8 +620,7 @@ export default function Header() {
                                       <div
                                         key={"notification" + index}
                                         className="flex pb-2 gap-x-4 items-center min-w-[200px]">
-                                        {/* <div className='w-8 h-8 bg-red-200 rounded-full'>
-                                                    </div> */}
+                                      
                                         <div className="flex flex-col flex-1">
                                           <label className="font-regular whitespace-nowrap text-black-text">
                                             {item.title}
@@ -679,28 +673,22 @@ export default function Header() {
                       </div>
                     ) : (
                       <>
-                        <div className="flex items-center">
+                        {/* <div className="flex items-center">
                           <Link href={"/login"}>
                             <span className="cursor-pointer">เข้าสู่ระบบ</span>
                           </Link>
                         </div>
                         <div className="flex items-center ml-2 pl-2">
                           <Link href={"/register"}>
-                            <button className="text-right  bg-blue-primary text-white px-4 py-1 rounded-lg hover:bg-blue-primary">
+                            <button className="text-right  bg-green-600 text-white px-4 py-1 rounded-lg hover:bg-green-700">
                               ลงทะเบียน
                             </button>
-                            {/* <span className="cursor-pointer">ลงทะเบียน</span> */}
+                           
                           </Link>
-                        </div>
+                        </div> */}
                       </>
                     )}
 
-                    {/* <div className='flex items-center ml-10 pl-2'>
-                        <span>ไทย</span>
-                    </div>
-                    <div className='flex items-center border-l-2 ml-2 pl-2'>
-                        <span>EN</span>
-                    </div> */}
                   </div>
                 </div>
               </div>

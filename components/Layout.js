@@ -15,34 +15,39 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <title>
-          Fuze Post : ผู้ให้บริการขนส่งและ โลจิสติกส์โซลูชันส์
-          สินค้าควบคุมอุณหภูมิ (แช่เย็น แช่แข็ง) ทั่วไทย
+          Green Dee Farm : ผู้ผลิตและจำหน่ายผักไฮโดรโปนิกส์
+          ผักใบเขียวออร์แกนิค สด สะอาด ปลอดภัย ภาคใต้
         </title>
         <meta
           name="description"
-          content="ฟิ้วโพสต์ คือ ผู้ให้บริการขนส่งเย็นในความร่วมมือของไปรษณีย์ไทย แฟลช เอ็กซ์เพรส และเอสซีจี เจดับเบิ้ลยูดี โลจิสติกส์ จำกัด (มหาชน)
-พร้อมสนับสนุนผู้ประกอบการธุรกิจ สินค้าควบคุมอุณหภูมิ อาทิ เช่น อาหารสด อาหารแปรรูป อาหารพื้นเมือง ผลไม้สด สู่ตลาดที่กว้างขึ้น ด้วยโครงข่ายขนส่งด่วนทั่วไทย"
+          content="Green Dee Farm ฟาร์มผักไฮโดรโปนิกส์ครบวงจร เชียวกรีนโอ๊ค ออกแดง Green Cos สดใหม่ทุกวัน ปลอดสารเคมี เก็บตรงจากฟาร์ม 
+จำหน่ายทั่วภูเก็ต พังงา กระบี่ โทร 064-542-0333 Line: birhids สั่งซื้อออนไลน์ส่งฟรีถึงบ้าน"
         />
+        {/* Favicon และ Icons */}
+        <link rel="icon" type="image/jpeg" href="/assets/images/farm/logoGreenDee.jpg" />
+        <link rel="shortcut icon" type="image/jpeg" href="/assets/images/farm/logoGreenDee.jpg" />
+        <link rel="apple-touch-icon" href="/assets/images/farm/logoGreenDee.jpg" />
+        <meta name="msapplication-TileImage" content="/assets/images/farm/logoGreenDee.jpg" />
         {/* ถ้าอยากให้สวยบนโซเชียลสามารถใส่ OG Tags ได้ด้วย */}
         <meta
           property="og:title"
-          content="Fuze Post : ผู้ให้บริการขนส่งและโลจิสติกส์โซลูชันส์แช่เย็น แช่แข็ง ทั่วไทย"
+          content="Green Dee Farm : ฟาร์มผักไฮโดรโปนิกส์ออร์แกนิค ภาคใต้"
         />
         <meta
           property="og:description"
-          content="ฟิ้วโพสต์ คือ ผู้ให้บริการขนส่งเย็น ร่วมกับไปรษณีย์ไทย แฟลช เอ็กซ์เพรส และ SCG JWD พร้อมช่วยผู้ประกอบการขยายตลาดสินค้าแช่เย็นทั่วประเทศ"
+          content="Green Dee Farm ผู้ผลิตผักไฮโดรโปนิกส์สด สะอาด ปลอดสารเคมี เชียวกรีนโอ๊ค ออกแดง Green Cos จัดส่งทั่วภูเก็ต พังงา กระบี่"
         />
-        {/* <meta property="og:image" content="/images/your-og-image.jpg" /> */}
+        <meta property="og:image" content="/assets/images/farm/logoGreenDee.jpg" />
         <meta property="og:type" content="website" />
         <meta
           name="twitter:title"
-          content="Fuze Post : ขนส่งควบคุมอุณหภูมิทั่วไทย"
+          content="Green Dee Farm : ผักไฮโดรโปนิกส์ออร์แกนิค"
         />
         <meta
           name="twitter:description"
-          content="บริการขนส่งเย็นทั่วไทย โดยความร่วมมือกับไปรษณีย์ไทย แฟลช และ SCG JWD"
+          content="ฟาร์มผักสดใหม่ ปลอดสารเคมี จัดส่งทั่วภาคใต้ โทร 064-542-0333 Line: birhids"
         />
-        <meta name="twitter:site" content="@FuzePost" />{" "}
+        <meta name="twitter:site" content="@GreenDeeFarm" />{" "}
         {/* ถ้ามี Twitter handle */}
       </Head>
       <Header />

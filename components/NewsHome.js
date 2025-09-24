@@ -18,10 +18,10 @@ const NewsHome = ({ resultNews = [] }) => {
       </Head> */}
       <div className="container mx-auto px-0 sm:px-12 mt-7 sm:mt-0">
         <div className="flex justify-between items-center  p-1 rounded-md mb-5">
-          <h3 className="text-left text-blue-900 font-extrabold text-xl sm:text-3xl">
+          <h3 className="text-left  text-green-700 font-extrabold text-xl sm:text-3xl">
             ข่าวสารประชาสัมพันธ์
           </h3>{" "}
-          <button className="text-right  bg-blue-primary text-white px-4 py-2 rounded hover:bg-blue-primary  cursor-pointer"  onClick={() => router.push("/news")}>
+          <button className="text-right bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 cursor-pointer transition-colors duration-200"  onClick={() => router.push("/news")}>
             ดูทั้งหมด
           </button>
         </div>
@@ -31,28 +31,31 @@ const NewsHome = ({ resultNews = [] }) => {
               <Link key={item.id} href={`/news/${item.id}`}>
                 <div
                   key={item.name}
-                  className="relative rounded-lg flex-col border-2 bg-white cursor-pointer">
+                  className="relative rounded-lg flex-col border-2 border-green-100 bg-white cursor-pointer shadow-md hover:shadow-lg hover:border-green-200 transition-all duration-300 transform hover:-translate-y-1">
                   <img
                     className={`w-full rounded-t-md h-[150px] sm:h-[200px] object-cover`}
-                    src={process.env.IMAGE_BACKEND_URL + item.image}
+                    src={item.image}
                   />
-                  <div className="flex flex-col p-2 px-3 gap-y-1 h-28">
-                    <label className="font-bold text-black line-clamp-1">
+                  <div className="flex flex-col p-4 gap-y-2 min-h-[140px]">
+                    <label className="font-bold text-green-800 line-clamp-2 hover:text-green-600 transition-colors duration-200 text-base">
                       {item.title}
                     </label>
-                    <small
-                      className={`text-gray-link line-clamp-2 ${styles.small_description}`}>
+                    <p className="text-gray-600 line-clamp-3 text-sm leading-relaxed">
                       {item.description
-                        .replace(/<[^>]*>?/gm, "")
-                        .replace(/&nbsp;/g, " ")}
-                    </small>
+                        .replace(/<[^>]*>/g, "")
+                        .replace(/&nbsp;/g, " ")
+                        .replace(/&amp;/g, "&")
+                        .replace(/&lt;/g, "<")
+                        .replace(/&gt;/g, ">")
+                        .trim()}
+                    </p>
                     <div className="flex gap-x-1 flex-1 items-end">
                       <ClockIcon
-                        color="#666"
+                        color="rgb(34, 197, 94)"
                         className="block h-5 w-4"
                         aria-hidden="true"
                       />
-                      <small>
+                      <small className="text-green-600">
                         {ConvertDateShortThai(item.updatedate, "DD MMM YYYY")}
                       </small>
                     </div>

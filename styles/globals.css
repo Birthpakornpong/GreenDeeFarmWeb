@@ -4,11 +4,11 @@
 
 @layer components {
   .header-1 {
-    @apply w-full bg-gradient-to-r from-blue-primary to-blue-secondary py-3 px-2 sm:px-6 lg:px-24 justify-between items-center flex text-white flex-wrap;
+    @apply w-full bg-gradient-to-r from-green-600 to-green-400 py-3 px-2 sm:px-6 lg:px-24 justify-between items-center flex text-white flex-wrap;
   }
 
   .header-2 {
-    @apply w-full bg-gradient-to-r from-blue-primary to-blue-secondary py-3 px-2 sm:px-6 lg:px-24 justify-between items-center flex text-white flex-wrap;
+    @apply w-full bg-gradient-to-r from-green-600 to-green-400 py-3 px-2 sm:px-6 lg:px-24 justify-between items-center flex text-white flex-wrap;
   }
 
   .dropdown-header {
@@ -132,7 +132,7 @@ ul li {
 }
 
 ul li::marker {
-  color: #002169;
+  color: #16a34a;
   font-size: 16px;
   margin: 10px 0px;
 }
@@ -146,7 +146,7 @@ ul.list-square li {
 }
 
 ul.list-square li::marker {
-  color: #002169;
+  color: #16a34a;
   font-size: 16px;
   margin: 10px 0px;
 }
@@ -177,7 +177,7 @@ button:disabled {
 }
 
 .container-text {
-  background-color: #13216a;
+  background-color: #16a34a;
   color: #fff;
   width: fit-content;
   margin: 0 auto;
@@ -193,7 +193,7 @@ button:disabled {
 }
 
 .tableA th {
-  background-color: #13216a;
+  background-color: #16a34a;
   padding: 25px 15px;
   color: #ffffff;
   font-size: 18px;
@@ -221,7 +221,7 @@ button:disabled {
 }
 
 .tableB th {
-  background-color: #13216a;
+  background-color: #16a34a;
   padding: 5px 5px;
   color: #ffffff;
   font-size: 16px;
@@ -239,7 +239,7 @@ button:disabled {
 }
 
 .tableC th {
-  background-color: #13216a;
+  background-color: #16a34a;
   padding: 10px 15px;
   color: #ffffff;
   font-size: 18px;
@@ -288,7 +288,7 @@ button:disabled {
 }
 
 .tableAUp th {
-  background-color: #13216a;
+  background-color: #16a34a;
   padding: 10px 7px;
   color: #ffffff;
   font-size: 18px;

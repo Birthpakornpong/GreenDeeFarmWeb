@@ -3,24 +3,24 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const ServiceStep = [
   {
-    head: "การเตรียมจัดสินค้า",
+    head: "การเก็บเกี่ยวผักสลัด",
     detail:
-      "การเตรียมจัดสินค้าให้พร้อมก่อนการจัดส่ง โดยควรตรวจสอบความสะอาดและความปลอดภัยของสินค้า",
+      "เก็บเกี่ยวผักสลัดในช่วงเวลาที่เหมาะสม ตรวจสอบคุณภาพและความสดใหม่ ล้างทำความสะอาดด้วยน้ำสะอาดและแห้งให้สนิท",
   },
   {
-    head: "ขั้นตอนการนำส่งสินค้า",
+    head: "การคัดเลือกและบรรจุภัณฑ์",
     detail:
-      "การเตรียมจัดสินค้าให้พร้อมก่อนการจัดส่ง โดยควรตรวจสอบความสะอาดและความปลอดภัยของสินค้า",
+      "คัดเลือกเฉพาะผักสลัดที่มีคุณภาพดี ไม่มีใบเหลือง หรือรอยเสียหาย บรรจุใส่ถุงพลาสติกเกรดอาหาร",
   },
   {
-    head: "ขั้นตอนการแพ็คสินค้าด้วยอุปกรณ์ที่ได้มาตรฐานของ FUZE POST",
+    head: "การเก็บรักษาในห้องเย็นและการแพ็คกิ้ง",
     detail:
-      "การเตรียมจัดสินค้าให้พร้อมก่อนการจัดส่ง โดยควรตรวจสอบความสะอาดและความปลอดภัยของสินค้า",
+      "เก็บรักษาผักสลัดในอุณหภูมิ 2-4 องศาเซลเซียส เพื่อรักษาความสดใหม่ ",
   },
   {
-    head: "ส่งสินค้าถึงมือลูกค้า",
+    head: "จัดส่งถึงลูกค้าภายใน 24 ชั่วโมง",
     detail:
-      "การเตรียมจัดสินค้าให้พร้อมก่อนการจัดส่ง โดยควรตรวจสอบความสะอาดและความปลอดภัยของสินค้า",
+      "จัดส่งผักสลัดสดใหม่ถึงมือลูกค้าภายใน 24 ชั่วโมงหลังการเก็บเกี่ยว ครอบคลุมพื้นที่ภูเก็ต พังงา กระบี่ พร้อมรับประกันความสดใหม่",
   },
 ];
 
@@ -29,8 +29,8 @@ const AccordionList = ({ banners = [] }) => {
     <>
       <div className="container mx-auto px-3 sm:px-12 mt-7 sm:mt-10 sm:mb-10">
         <div className="flex justify-between items-center  p-1 rounded-md mb-5">
-          <h3 className="text-left text-blue-900 font-extrabold text-xl sm:text-3xl">
-            ขั้นตอนการใช้บริการ
+          <h3 className="text-left text-green-700 font-extrabold text-xl sm:text-3xl">
+            ขั้นตอนการผลิตและจัดส่งผักสลัด
           </h3>{" "}
           {/* <button className="text-right  bg-blue-primary text-white px-4 py-2 rounded hover:bg-blue-primary">
             ดูทั้งหมด
@@ -60,7 +60,7 @@ const AccordionList = ({ banners = [] }) => {
                               className={
                                 "group flex w-full items-center justify-between py-3"
                               }>
-                              <h3 className="text-left text-blue-900 font-extrabold text-xl ">
+                              <h3 className="text-left text-green-700 font-extrabold text-xl ">
                                 {index + 1}. {item.head}
                               </h3>
                               <ChevronDownIcon
