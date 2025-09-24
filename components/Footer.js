@@ -11,7 +11,7 @@ const navigation = [
   //   extarnal: false,
   //   link: "https://track.fuzepost.co.th/",
   // },
-  { name: "บริการ", href: "service" },
+  { name: "บริการ", href: "area" },
   //   { name: "หน้าแรก", href: "#" },
   //   {
   //     name: "นัดหมายรับสินค้า",
