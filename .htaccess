@@ -4,9 +4,14 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Handle Next.js static assets
+RewriteCond %{REQUEST_URI} ^/_next/static/
+RewriteRule ^(.*)$ /$1 [L]
+
 # Handle Next.js static export routing
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/_next/
 RewriteRule ^(.+)$ /$1.html [L]
 
 # Redirect trailing slashes
@@ -21,6 +26,17 @@ RewriteRule ^([^/]+)/$ /$1 [R=301,L]
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </IfModule>
 
+# MIME Types for Next.js assets
+<IfModule mod_mime.c>
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType application/json .json
+    AddType image/svg+xml .svg
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+    AddType font/ttf .ttf
+</IfModule>
+
 # Enable compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
@@ -32,6 +48,7 @@ RewriteRule ^([^/]+)/$ /$1 [R=301,L]
     AddOutputFilterByType DEFLATE application/rss+xml
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
 </IfModule>
 
 # Cache control
