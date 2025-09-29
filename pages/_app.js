@@ -85,10 +85,10 @@ export default function MyApp({
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return <LoadingScreen message="เตรียมเว็บไซต์..." />;
-  }
+  // Router events effect - must be declared before conditional return
   React.useEffect(() => {
+    if (!mounted) return; // Only run after mounting
+    
     const start = () => {
       setLoading(true);
       toast.loading('กรุณารอสักครู่', {
@@ -112,9 +112,11 @@ export default function MyApp({
       Router.events.off("routeChangeComplete", end);
       Router.events.off("routeChangeError", end);
     };
-  }, []);
+  }, [mounted]);
 
   React.useEffect(() => {
+    if (!mounted) return; // Only run after mounting
+    
     // โหลด Google Analytics script
     const script = document.createElement('script');
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-T4N0138Y63';
@@ -129,8 +131,12 @@ export default function MyApp({
     gtag('js', new Date());
     gtag('config', 'G-T4N0138Y63');
 
-  }, []);
+  }, [mounted]);
 
+  // Show loading screen until mounted
+  if (!mounted) {
+    return <LoadingScreen message="เตรียมเว็บไซต์..." />;
+  }
 
   return (
     <ErrorBoundary>
