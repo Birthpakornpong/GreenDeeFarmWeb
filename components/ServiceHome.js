@@ -42,7 +42,7 @@ const ServiceHome = ({ banners = [] }) => {
               </div>
               <div className="mt-5 rounded-lg bg-white flex-1 ml-0 sm:ml-2 shadow-lg flex flex-col justify-between overflow-hidden">
                 <img               
-                  src="/assets/images/farm/banner1.jpg"
+                  src="/assets/images/farm/greens-reds.jpg"
                   className="w-full h-60 sm:h-80 md:h-80 object-cover"
                 />
               </div>
