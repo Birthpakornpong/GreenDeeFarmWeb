@@ -1,0 +1,23 @@
+# Environment Variables สำหรับ Deploy
+# คัดลอกไปตั้งใน hosting service ของคุณ
+
+# 🌐 Production URLs
+NEXTAUTH_URL=https://www.greendeefarm.com
+NEXTAUTH_SECRET=production-secret-key-2025-change-this
+
+# 🗄️ Database Connection  
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=greendee_farm
+DB_USER=greendee_farm
+DB_PASSWORD=Bird993546*
+
+# 🔐 Security
+JWT_SECRET=production-jwt-secret-2025-very-secure
+NODE_ENV=production
+DB_DEBUG=false
+
+# หากเชื่อมต่อไม่ได้ ลองเปลี่ยน DB_HOST เป็น:
+# DB_HOST=127.0.0.1
+# DB_HOST=103.30.127.13
+# DB_HOST=mysql.yourdomain.com

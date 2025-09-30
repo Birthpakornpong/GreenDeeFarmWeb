@@ -19,6 +19,42 @@ import { PhoneIcon } from "@heroicons/react/solid";
 import React from "react";
 import Select from "react-select";
 
+// Custom Auth Hook for new auth system
+const useAuth = () => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const response = await fetch('/api/auth/me');
+        if (response.ok) {
+          const data = await response.json();
+          setUser(data.user);
+        }
+      } catch (error) {
+        // User not logged in
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    checkAuth();
+  }, []);
+
+  const logout = async () => {
+    try {
+      await fetch('/api/auth/logout', { method: 'POST' });
+      setUser(null);
+      window.location.reload();
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
+  return { user, loading, logout };
+};
+
 const SocialButtons = () => {
   return (
     <div className="flex gap-2">
@@ -191,6 +227,9 @@ export default function Header() {
   const dispatch = useDispatch();
   const userState = useSelector((state) => state.user);
   const [notifications, setnotifications] = useState([]);
+  
+  // Use new auth system
+  const { user: authUser, loading: authLoading, logout: authLogout } = useAuth();
   const signOutFunction = async () => {
     dispatch({
       type: "clear_all",
@@ -526,19 +565,34 @@ export default function Header() {
                       </div>
                     ) : (
                       <>
-                        {/* <div className="flex items-center">
-                          <Link href={"/login"}>
-                            <span className="cursor-pointer">เข้าสู่ระบบ</span>
-                          </Link>
-                        </div>
-                        <div className="flex items-center ml-2 pl-2">
-                          <Link href={"/register"}>
-                            <button className="text-right  bg-blue-primary text-white px-4 py-2 rounded-lg hover:bg-blue-primary">
-                              ลงทะเบียน
+                        {/* Show auth user info or login/register buttons */}
+                        {authUser ? (
+                          <div className="flex items-center space-x-4">
+                            <Link href="/dashboard">
+                              <span className="cursor-pointer text-green-600 hover:text-green-700 font-medium">
+                                {authUser.full_name || authUser.username}
+                              </span>
+                            </Link>
+                            <button
+                              onClick={authLogout}
+                              className="bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700 text-sm">
+                              ออกจากระบบ
                             </button>
-                       
-                          </Link>
-                        </div> */}
+                          </div>
+                        ) : (
+                          <div className="flex items-center space-x-2">
+                            <Link href="/auth/login">
+                              <span className="cursor-pointer text-green-600 hover:text-green-700 font-medium">
+                                เข้าสู่ระบบ
+                              </span>
+                            </Link>
+                            <Link href="/auth/register">
+                              <button className="bg-green-600 text-white px-3 py-1 rounded-lg hover:bg-green-700 text-sm">
+                                สมัครสมาชิก
+                              </button>
+                            </Link>
+                          </div>
+                        )}
                       </>
                     )}
 
