@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import custom product enhancement styles */
+@import './product-enhancement.css';
+
 @layer components {
   .header-1 {
     @apply w-full bg-gradient-to-r from-green-600 to-green-400 py-3 px-2 sm:px-6 lg:px-24 justify-between items-center flex text-white flex-wrap;

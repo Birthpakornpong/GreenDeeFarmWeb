@@ -24,7 +24,7 @@ const CarouselSlide = ({ banners = [] }) => {
   const farmImages = [
     {
       id: 1,
-      src: "/assets/images/farm/banner1.jpg",
+      src: "/assets/images/farm/greens-reds.jpg",
       title: "ฟาร์มผักสลัดออร์แกนิก Green Dee Farm"
     },
     {

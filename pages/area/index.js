@@ -40,9 +40,9 @@ const AreaPage = () => {
     }, []);
     return <div>
         <Head>
-            <title>สินค้าและบริการ</title>
-            {/* <meta name="description" content="พื้นที่บริการจัดส่งสินค้า - Fuze Application" />
-            <link rel="icon" href="/favicon.ico" /> */}
+            <title>ผลิตภัณฑ์ Green Dee Farm - ผักไฮโดรโปนิกส์คุณภาพสูง</title>
+            <meta name="description" content="ผลิตภัณฑ์ผักไฮโดรโปนิกส์จาก Green Dee Farm กรีนโอ๊ค เรดโอ๊ค กรีนคอส สด สะอาด ปลอดภัย ส่งตรงจากฟาร์ม" />
+            <link rel="stylesheet" href="/styles/product-enhancement.css" />
         </Head>
         {/* <div className="ml-5 lg:ml-24">
             <TitleMenu title={"ขนาดกล่อง"}
@@ -82,25 +82,26 @@ const AreaPage = () => {
                         benefits: "ให้วิตามิน K และใยอาหารสูง"
                     }
                 ].map((item, index) => {
-                    return <div key={item.name} className="relative rounded-lg flex-col border-2 border-green-200 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                        <div className="relative w-full h-48 sm:h-56">
+                    return <div key={item.name} className="product-card relative rounded-2xl flex-col border-2 border-green-200 bg-white shadow-lg overflow-hidden">
+                        <div className="product-image-container relative w-full h-64 sm:h-72 md:h-80 lg:h-96">
                             <img 
-                                className="w-full h-full object-cover" 
+                                className="product-image w-full h-full" 
                                 src={item.image} 
                                 alt={item.name}
+                                loading="lazy"
                                 onError={(e) => {
-                                    e.target.src = "https://via.placeholder.com/400x300/4ade80/ffffff?text=" + encodeURIComponent(item.name);
+                                    e.target.src = "https://via.placeholder.com/600x400/4ade80/ffffff?text=" + encodeURIComponent(item.name);
                                 }}
                             />
-                            <div className={`bg-green-600 px-3 sm:px-5 py-2 rounded-lg absolute shadow-md z-10`} style={{ top: '15px', left: '15px' }}>
-                                <label className="text-white font-bold text-base sm:text-lg">{item.name}</label>
+                            <div className="product-badge px-4 sm:px-6 py-2 sm:py-3 rounded-xl absolute shadow-lg z-10" style={{ top: '20px', left: '20px' }}>
+                                <label className="text-white font-bold text-lg sm:text-xl">{item.name}</label>
                             </div>
                         </div>
-                        <div className="px-4 py-4 text-center">
-                            <label className="text-gray-500 text-lg sm:text-xs italic mb-2 block">{item.englishName}</label>
-                            <p className="text-base sm:text-sm text-gray-700 mb-3 leading-relaxed">{item.description}</p>
-                            <div className="bg-green-50 p-3 rounded-lg">
-                                <label className="text-sm sm:text-xs text-green-700 font-medium">{item.benefits}</label>
+                        <div className="product-content px-5 py-5 sm:px-6 sm:py-6 text-center">
+                            <label className="text-gray-500 text-sm sm:text-base italic mb-3 block font-light">{item.englishName}</label>
+                            <p className="text-sm sm:text-base text-gray-700 mb-4 leading-relaxed">{item.description}</p>
+                            <div className="product-benefits p-4 rounded-xl">
+                                <label className="text-sm sm:text-base text-green-800 font-semibold">{item.benefits}</label>
                             </div>
                         </div>
                     </div>

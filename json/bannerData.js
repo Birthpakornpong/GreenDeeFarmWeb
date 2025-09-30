@@ -10,7 +10,7 @@ const BannerData = [
         "createby": "1",
         "updatedate": "2025-07-14T10:29:23.000Z",
         "updateby": "1147",
-        "image": "assets/images/farm/banner2.jpg",
+        "image": "assets/images/farm/greens-reds.jpg",
         "seq": 3,
         "record_status": "A"
     },
@@ -40,7 +40,7 @@ const BannerData = [
         "createby": "1",
         "updatedate": "2025-04-16T01:13:53.000Z",
         "updateby": "1",
-         "image": "assets/images/farm/banner1.jpg",
+         "image": "assets/images/farm/banner2.jpg",
         "seq": 2,
         "record_status": "A"
     }

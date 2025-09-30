@@ -40,7 +40,7 @@ const newsData = [
         "createby": "1",
         "updatedate": "2025-09-05T09:00:00.000Z",
         "updateby": "1",
-        "image": "/assets/images/farm/new2.jpg",
+        "image": "/assets/images/farm/greens-reds.jpg",
         "seq": 3,
         "record_status": "A"
     },
