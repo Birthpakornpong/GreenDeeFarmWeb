@@ -25,12 +25,23 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*
+.env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
-.env.production
+
+# Keep example files for reference
+!.env.production.example
+!.env.local.example
+!deploy-env-variables.txt
+
+# SQLite database files (if used for development)
+*.db
+*.sqlite
+*.sqlite3
+
+# Development files
+dev.db
 
 # vercel
 .vercel
