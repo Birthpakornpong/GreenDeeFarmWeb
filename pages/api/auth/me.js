@@ -1,6 +1,6 @@
-// pages/api/auth/me.js - Get current user API
+// pages/api/auth/me.js - Get current user API with Supabase
 import { verifyToken } from '../../../lib/auth';
-import { userOperations } from '../../../lib/mysql';
+import { userOperations } from '../../../lib/supabase';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -28,18 +28,20 @@ export default async function handler(req, res) {
     }
 
     // ดึงข้อมูลผู้ใช้จากฐานข้อมูล
-    const userResult = await userOperations.findById(decoded.id);
+    const userResult = await userOperations.findUserById(decoded.id);
     
-    if (!userResult.success || userResult.data.length === 0) {
+    if (!userResult.success || !userResult.data) {
       return res.status(404).json({ 
         message: 'ไม่พบผู้ใช้' 
       });
     }
 
-    const user = userResult.data[0];
+    const user = userResult.data;
+    // ลบ password ออกจาก response
+    const { password, ...safeUser } = user;
 
     return res.status(200).json({
-      user: user
+      user: safeUser
     });
 
   } catch (error) {

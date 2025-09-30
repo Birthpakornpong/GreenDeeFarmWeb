@@ -1,5 +1,5 @@
-// pages/api/auth/login.js - Login API
-import { userOperations } from '../../../lib/mysql';
+// pages/api/auth/login.js - Login API with Supabase
+import { userOperations } from '../../../lib/supabase';
 import { verifyPassword, generateToken } from '../../../lib/auth';
 import { serialize } from 'cookie';
 
@@ -19,15 +19,15 @@ export default async function handler(req, res) {
     }
 
     // หาผู้ใช้ในฐานข้อมูล
-    const userResult = await userOperations.findByUsername(username);
+    const userResult = await userOperations.findUserByUsername(username);
     
-    if (!userResult.success || userResult.data.length === 0) {
+    if (!userResult.success || !userResult.data) {
       return res.status(401).json({ 
         message: 'Username หรือ password ไม่ถูกต้อง' 
       });
     }
 
-    const user = userResult.data[0];
+    const user = userResult.data;
 
     // ตรวจสอบ password
     const isPasswordValid = await verifyPassword(password, user.password);

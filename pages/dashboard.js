@@ -167,21 +167,29 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-4">เมню</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <Link href="/" className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition-colors text-center">
-                <div className="text-2xl mb-2">🏠</div>
-                <div className="font-medium">หน้าหลัก</div>
+              <Link href="/" className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition-colors text-center block">
+                <div>
+                  <div className="text-2xl mb-2">🏠</div>
+                  <div className="font-medium">หน้าหลัก</div>
+                </div>
               </Link>
-              <Link href="/news" className="bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition-colors text-center">
-                <div className="text-2xl mb-2">📰</div>
-                <div className="font-medium">ข่าวสาร</div>
+              <Link href="/news" className="bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+                <div>
+                  <div className="text-2xl mb-2">📰</div>
+                  <div className="font-medium">ข่าวสาร</div>
+                </div>
               </Link>
-              <Link href="/contact" className="bg-yellow-600 text-white p-4 rounded-lg hover:bg-yellow-700 transition-colors text-center">
-                <div className="text-2xl mb-2">📞</div>
-                <div className="font-medium">ติดต่อเรา</div>
+              <Link href="/contact" className="bg-yellow-600 text-white p-4 rounded-lg hover:bg-yellow-700 transition-colors text-center block">
+                <div>
+                  <div className="text-2xl mb-2">📞</div>
+                  <div className="font-medium">ติดต่อเรา</div>
+                </div>
               </Link>
-              <Link href="/about" className="bg-purple-600 text-white p-4 rounded-lg hover:bg-purple-700 transition-colors text-center">
-                <div className="text-2xl mb-2">ℹ️</div>
-                <div className="font-medium">เกี่ยวกับเรา</div>
+              <Link href="/about" className="bg-purple-600 text-white p-4 rounded-lg hover:bg-purple-700 transition-colors text-center block">
+                <div>
+                  <div className="text-2xl mb-2">ℹ️</div>
+                  <div className="font-medium">เกี่ยวกับเรา</div>
+                </div>
               </Link>
             </div>
           </div>

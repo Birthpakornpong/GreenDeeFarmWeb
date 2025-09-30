@@ -1,5 +1,5 @@
-// pages/api/auth/register.js - Registration API
-import { userOperations } from '../../../lib/mysql';
+// pages/api/auth/register.js - Registration API with Supabase
+import { userOperations } from '../../../lib/supabase';
 import { hashPassword, isValidEmail, isValidPassword, isValidUsername } from '../../../lib/auth';
 
 export default async function handler(req, res) {
@@ -36,16 +36,16 @@ export default async function handler(req, res) {
     }
 
     // ตรวจสอบว่า username ซ้ำหรือไม่
-    const existingUsername = await userOperations.findByUsername(username);
-    if (existingUsername.success && existingUsername.data.length > 0) {
+    const existingUsername = await userOperations.findUserByUsername(username);
+    if (existingUsername.success && existingUsername.data) {
       return res.status(400).json({ 
         message: 'Username นี้ถูกใช้งานแล้ว' 
       });
     }
 
     // ตรวจสอบว่า email ซ้ำหรือไม่
-    const existingEmail = await userOperations.findByEmail(email);
-    if (existingEmail.success && existingEmail.data.length > 0) {
+    const existingEmail = await userOperations.findUserByEmail(email);
+    if (existingEmail.success && existingEmail.data) {
       return res.status(400).json({ 
         message: 'Email นี้ถูกใช้งานแล้ว' 
       });
@@ -68,8 +68,7 @@ export default async function handler(req, res) {
 
     if (result.success) {
       // ลบ password ออกจาก response
-      const { password: _, ...userResponse } = userData;
-      userResponse.id = result.data.insertId;
+      const { password: _, ...userResponse } = result.data;
       
       return res.status(201).json({
         message: 'สมัครสมาชิกสำเร็จ!',
