@@ -581,7 +581,7 @@ export default function Header() {
                           </div>
                         ) : (
                           <div className="flex items-center space-x-2">
-                            <Link href="/auth/login">
+                            {/* <Link href="/auth/login">
                               <span className="cursor-pointer text-green-600 hover:text-green-700 font-medium">
                                 เข้าสู่ระบบ
                               </span>
@@ -590,7 +590,7 @@ export default function Header() {
                               <button className="bg-green-600 text-white px-3 py-1 rounded-lg hover:bg-green-700 text-sm">
                                 สมัครสมาชิก
                               </button>
-                            </Link>
+                            </Link> */}
                           </div>
                         )}
                       </>
